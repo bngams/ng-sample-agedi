@@ -19,7 +19,9 @@ import { Component } from '@angular/core';
         <li class="menu-item ml-15">
           <a routerLink="/intro" routerLinkActive="active">Intro</a>
         </li>
-        <li class="menu-item ml-15">Products</li>
+        <li class="menu-item ml-15">
+          <a routerLink="/product" routerLinkActive="active">Products</a>
+        </li>
       </ul>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>person</mat-icon>

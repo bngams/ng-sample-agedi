@@ -9,9 +9,7 @@ import { IntroComponent } from './pages/intro/intro.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './pages/layout/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MaterialModule } from './modules/material.module';
 
 @NgModule({
   declarations: [
@@ -28,9 +26,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserModule, // pipes
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatToolbarModule, 
-    MatIconModule,
-    MatButtonModule
+    MaterialModule
   ],
   providers: [],
   // <app-root> available during app starting

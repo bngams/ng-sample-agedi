@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .field, button {
+    margin-left: 15px;
+  }
+  button {
+    margin-bottom: 15px;
+  }
+}
