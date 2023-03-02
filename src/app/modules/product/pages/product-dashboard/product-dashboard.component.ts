@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product-dashboard',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-dashboard.component.scss']
 })
 export class ProductDashboardComponent {
+
+  addProduct(product: Product) {
+    console.log('Recevied', product);
+  }
 
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <!-- Afficher le form produits -->
   <h2>Ajout produit</h2>
-  <app-product-form></app-product-form>
+  <app-product-form (newProduct)="addProduct($event)"></app-product-form>
 
   <!-- Afficher la liste produits -->
   <h2>Liste des produits</h2>
