@@ -8,13 +8,15 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { MaterialModule } from '../material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
     ProductListComponent,
     ProductFormComponent,
-    ProductDashboardComponent
+    ProductDashboardComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
