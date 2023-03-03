@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/utils/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -19,14 +20,14 @@ import { Component } from '@angular/core';
         <li class="menu-item ml-15">
           <a routerLink="/intro" routerLinkActive="active">Intro</a>
         </li>
-        <li class="menu-item ml-15">
+        <li class="menu-item ml-15" *ngIf="authService.isLoggedIn">
           <a routerLink="/product" routerLinkActive="active">Products</a>
         </li>
       </ul>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>person</mat-icon>
+      <button routerLink="/login" routerLinkActive="active" *ngIf="!authService.isLoggedIn" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>person</mat-icon>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <button *ngIf="authService.isLoggedIn" (click)="authService.logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>logout</mat-icon>
       </button>
     </mat-toolbar>
@@ -56,4 +57,7 @@ import { Component } from '@angular/core';
   `]
 })
 export class HeaderComponent {
+
+  constructor(readonly authService: AuthService) { }
+
 }

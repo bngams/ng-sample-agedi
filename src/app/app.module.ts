@@ -10,6 +10,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './pages/layout/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { MaterialModule } from './modules/material.module';
     HomeComponent,
     IntroComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, // pipes
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule   
   ],
   providers: [],
   // <app-root> available during app starting

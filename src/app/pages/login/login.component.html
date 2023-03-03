@@ -1,0 +1,15 @@
+<form #loginForm="ngForm" (ngSubmit)="submit()">
+  <!-- titre -->
+  <mat-form-field class="field">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="credentials.email" name="email" required type="email">
+  </mat-form-field>
+  <!-- price -->
+  <mat-form-field class="field">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="credentials.pwd" name="pwd"  required>
+  </mat-form-field>
+  <!-- submit -->
+  <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Se connecter</button>
+</form>
+

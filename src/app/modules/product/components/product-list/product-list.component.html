@@ -1,3 +1,6 @@
+<!-- products from form -->
 <app-product-card *ngFor="let p of products" [product]="p">
-  <img #defaultImage src="#">
+</app-product-card>
+<!-- product from observable -->
+<app-product-card *ngFor="let p of products$ | async" [product]="p">
 </app-product-card>
