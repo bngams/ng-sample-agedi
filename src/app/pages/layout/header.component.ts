@@ -14,20 +14,20 @@ import { AuthService } from 'src/app/utils/services/auth.service';
       <!-- <app-menu *ngIf="..."></app-menu>  -->
       <!-- <app-menu-admin *ngIf="..."></app-menu-admin>  -->
       <ul id="menu">
-        <li class="menu-item ml-15">
+        <li class="menu-item ml-15" data-testid="link-home">
           <a [routerLink]="'/home'" routerLinkActive="active">Home</a>
         </li>
-        <li class="menu-item ml-15">
+        <li class="menu-item ml-15" data-testid="link-intro">
           <a routerLink="/intro" routerLinkActive="active">Intro</a>
         </li>
-        <li class="menu-item ml-15" *ngIf="authService.isLoggedIn">
+        <li class="menu-item ml-15" *ngIf="authService.isLoggedIn" data-testid="link-product">
           <a routerLink="/product" routerLinkActive="active">Products</a>
         </li>
       </ul>
-      <button routerLink="/login" routerLinkActive="active" *ngIf="!authService.isLoggedIn" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button routerLink="/login" routerLinkActive="active" data-testid="link-login" *ngIf="!authService.isLoggedIn" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
           <mat-icon>person</mat-icon>
       </button>
-      <button *ngIf="authService.isLoggedIn" (click)="authService.logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <button *ngIf="authService.isLoggedIn" (click)="authService.logout()" data-testid="link-logout" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>logout</mat-icon>
       </button>
     </mat-toolbar>
@@ -40,7 +40,7 @@ import { AuthService } from 'src/app/utils/services/auth.service';
     #menu {
       display: flex;
       list-style-type: none;
-      
+
       .menu-item {
         /* margin-left: 15px;*/
         a {

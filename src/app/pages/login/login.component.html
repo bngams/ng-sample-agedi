@@ -2,14 +2,14 @@
   <!-- titre -->
   <mat-form-field class="field">
     <mat-label>Email</mat-label>
-    <input matInput [(ngModel)]="credentials.email" name="email" required type="email">
+    <input matInput [(ngModel)]="credentials.email" name="email" required type="email" data-testid="input-name">
   </mat-form-field>
   <!-- price -->
   <mat-form-field class="field">
     <mat-label>Password</mat-label>
-    <input matInput type="password" [(ngModel)]="credentials.pwd" name="pwd"  required>
+    <input matInput type="password" [(ngModel)]="credentials.pwd" name="pwd"  required data-testid="input-pwd">
   </mat-form-field>
   <!-- submit -->
-  <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Se connecter</button>
+  <button mat-raised-button color="primary" [disabled]="loginForm.invalid" data-testid="submit">Se connecter</button>
 </form>
 
